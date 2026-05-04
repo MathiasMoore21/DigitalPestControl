@@ -1,0 +1,114 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class GameManager {
+    private int score;
+    private int lives;
+    private int timeRemaining;
+    private String difficulty;
+    private boolean gameRunning;
+    private boolean gameOver;
+    private Timer gameTimer;
+    
+    // Level parameters
+    private int spawnDelay; // milliseconds between spawns
+    private int moleVisibleDuration;
+    private int bombFrequency; // 0-100%
+    
+    public GameManager(String difficulty) {
+        this.difficulty = difficulty;
+        this.score = 0;
+        this.lives = 3;
+        this.gameRunning = true;
+        this.gameOver = false;
+        
+        // Set difficulty parameters
+        switch(difficulty) {
+            case "Summer":
+                spawnDelay = 1200;
+                moleVisibleDuration = 1500;
+                bombFrequency = 10;
+                timeRemaining = 60;
+                break;
+            case "Spring":
+                spawnDelay = 900;
+                moleVisibleDuration = 1200;
+                bombFrequency = 25;
+                timeRemaining = 50;
+                break;
+            case "Autumn":
+                spawnDelay = 700;
+                moleVisibleDuration = 900;
+                bombFrequency = 40;
+                timeRemaining = 40;
+                break;
+            case "Winter":
+                spawnDelay = 500;
+                moleVisibleDuration = 600;
+                bombFrequency = 60;
+                timeRemaining = 30;
+                break;
+            default:
+                spawnDelay = 1000;
+                moleVisibleDuration = 1000;
+                bombFrequency = 20;
+                timeRemaining = 45;
+        }
+        
+        startTimer();
+    }
+    
+    private void startTimer() {
+        gameTimer = new Timer(1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (gameRunning && timeRemaining > 0) {
+                    timeRemaining--;
+                    if (timeRemaining <= 0 || lives <= 0) {
+                        endGame();
+                    }
+                }
+            }
+        });
+        gameTimer.start();
+    }
+    
+    public void endGame() {
+        gameRunning = false;
+        gameOver = true;
+        if (gameTimer != null) {
+            gameTimer.stop();
+        }
+    }
+    
+    public void hitMole() {
+        if (!gameRunning) return;
+        score++;
+    }
+    
+    public void hitBomb() {
+        if (!gameRunning) return;
+        lives--;
+        if (lives <= 0) {
+            endGame();
+        }
+    }
+    
+    public void stopTimer() {
+        if (gameTimer != null) {
+            gameTimer.stop();
+        }
+    }
+    
+    // Getters
+    public int getScore() { return score; }
+    public int getLives() { return lives; }
+    public int getTimeRemaining() { return timeRemaining; }
+    public boolean isGameRunning() { return gameRunning; }
+    public boolean isGameOver() { return gameOver; }
+    public int getSpawnDelay() { return spawnDelay; }
+    public int getMoleVisibleDuration() { return moleVisibleDuration; }
+    public int getBombFrequency() { return bombFrequency; }
+    public String getDifficulty() { return difficulty; }
+}

@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=RedTint
+comment1.params=img
+comment1.target=java.awt.image.BufferedImage\ applyEffect(java.awt.image.BufferedImage)
+numComments=2

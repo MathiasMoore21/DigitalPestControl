@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Animation
+comment1.params=snow\ leaves
+comment1.target=Animation(boolean,\ boolean)
+comment2.params=width\ height
+comment2.target=void\ update(int,\ int)
+comment3.params=g2
+comment3.target=void\ draw(java.awt.Graphics2D)
+numComments=4

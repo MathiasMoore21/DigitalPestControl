@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=GameWindow
+comment1.params=
+comment1.target=GameWindow()
+comment2.params=
+comment2.target=void\ showMenu()
+comment3.params=g
+comment3.target=void\ paintComponent(java.awt.Graphics)
+comment4.params=e
+comment4.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment5.params=bg\ snow\ leaves\ sound\ difficulty
+comment5.target=void\ loadLevel(java.lang.String,\ boolean,\ boolean,\ java.lang.String,\ int)
+comment6.params=difficulty
+comment6.target=void\ showTransitionScreen(int)
+comment7.params=
+comment7.target=void\ launchCircuitCleanerGame()
+comment8.params=
+comment8.target=void\ returnToMenu()
+comment9.params=args
+comment9.target=void\ main(java.lang.String[])
+numComments=10

@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Mole
+comment0.text=\n\ A\ single\ entity\ \u2013\ either\ a\ MOLE\ or\ a\ BOMB\ \u2013\ that\ pops\ out\ of\ a\ hole.\n\n\ \ State\ machine\:\n\ \ \ \ RISING\ \ \u2192\ moves\ upward\ until\ fully\ visible\n\ \ \ \ SHOWING\ \u2192\ waits\ for\ a\ click\ or\ timeout\n\ \ \ \ FALLING\ \u2192\ retreats\ back\ into\ the\ hole\n\ \ \ \ DONE\ \ \ \ \u2192\ off-screen;\ safe\ to\ remove\n\n\ \ Visual\ trick\:\n\ \ \ \ draw()\ clips\ itself\ to\ y\ <\ holeY\ so\ the\ sprite\ only\ appears\ above\n\ \ \ \ the\ hole\ centre.\ \ GamePanel\ draws\ holes\ on\ top\ afterwards,\ which\n\ \ \ \ frames\ the\ exit\ point\ and\ completes\ the\ emerging-from-ground\ illusion.\n\n\ \ Animation\:\n\ \ \ \ While\ SHOWING,\ the\ entity\ wiggles\ (mole)\ or\ shakes\ (bomb)\ using\ a\ sine\ wave.\n\ \ \ \ Hit\ detection\ follows\ the\ animated\ position.\n
+comment1.params=holeIndex\ cx\ holeY\ kind\ showTicks
+comment1.target=Mole(int,\ int,\ int,\ Mole.Kind,\ int)
+comment2.params=
+comment2.target=void\ update()
+comment3.params=g
+comment3.target=void\ draw(java.awt.Graphics)
+comment3.text=\n\ Draws\ the\ sprite\ with\ a\ horizontal\ offset\ (wiggle/shake)\ applied.\n\ The\ clip\ is\ still\ relative\ to\ the\ original\ holeY\ to\ keep\ the\ illusion.\n
+comment4.params=mx\ my
+comment4.target=boolean\ contains(int,\ int)
+comment4.text=True\ when\ (mx,\ my)\ overlaps\ the\ visible\ sprite\ (only\ during\ SHOWING).
+comment5.params=
+comment5.target=void\ hit()
+comment6.params=
+comment6.target=boolean\ isHit()
+comment7.params=
+comment7.target=boolean\ isDone()
+comment8.params=
+comment8.target=Mole.Kind\ getKind()
+comment9.params=
+comment9.target=int\ getHoleIndex()
+numComments=10

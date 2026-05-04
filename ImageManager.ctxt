@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ImageManager
+comment1.params=
+comment1.target=ImageManager()
+comment2.params=fileName
+comment2.target=java.awt.Image\ loadImage(java.lang.String)
+comment3.params=filename
+comment3.target=java.awt.image.BufferedImage\ loadBufferedImage(java.lang.String)
+comment4.params=src
+comment4.target=java.awt.image.BufferedImage\ copyImage(java.awt.image.BufferedImage)
+numComments=5

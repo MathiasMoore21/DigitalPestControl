@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=SoundManager
+comment1.params=filename
+comment1.target=void\ playLoop(java.lang.String)
+comment2.params=filename
+comment2.target=void\ playOnce(java.lang.String)
+comment3.params=
+comment3.target=void\ stop()
+comment4.params=clip\ gain
+comment4.target=void\ setVolume(javax.sound.sampled.Clip,\ float)
+numComments=5

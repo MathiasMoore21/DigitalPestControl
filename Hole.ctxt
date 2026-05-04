@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Hole
+comment0.text=\n\ A\ hole\ on\ the\ play\ field.\n\ Always\ drawn\ AFTER\ moles\ so\ the\ rim\ naturally\ frames\ the\ emergence\ point.\n
+comment1.params=cx\ cy
+comment1.target=Hole(int,\ int)
+comment2.params=g
+comment2.target=void\ draw(java.awt.Graphics)
+comment3.params=
+comment3.target=int\ getCx()
+comment4.params=
+comment4.target=int\ getCy()
+comment5.params=
+comment5.target=boolean\ isOccupied()
+comment6.params=v
+comment6.target=void\ setOccupied(boolean)
+numComments=7
